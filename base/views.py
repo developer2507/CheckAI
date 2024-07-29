@@ -10,7 +10,7 @@ from .models import File, UserProfile
 from .forms import FileUploadForm, StatusUpdateForm
 
 
-#api_key = 'sk-proj-B9Lkg4kBtmm7RpuJ9XF1T3BlbkFJpek9QRi8zq3VJBJPde7J'
+
 # Create your views here.
 def homePage(request):
     
