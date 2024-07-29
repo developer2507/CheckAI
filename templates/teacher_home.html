@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div style="margin-top: 150px;">
+        <div style="max-width: 500px; margin: 0 auto;">
+            <h1>Welcome, Teacher!</h1>
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+    
+                <input type="submit" class="btn btn-default" value="Upload File">
+            </form> 
+        </div>
+    </div>            
+</div>
+
+{% endblock content %}

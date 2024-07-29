@@ -1,0 +1,27 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+<div class="container">
+
+    <div style="margin-top: 80px;">
+        <div class="text-center">
+            <h1>Check Your Homework And Get Review</h1>
+        </div>
+    
+        <div style="margin-top: 70px;">
+            <form action="" method="POST">
+                {% csrf_token %}
+                <div class="form-outline" data-mdb-input-init>
+                    <textarea class="form-control" id="textAreaExample user-input" rows="5" name="prompt"></textarea>
+                    <label class="form-label" for="textAreaExample">Write a tasks with answers</label>
+                </div>
+                <br>
+                <input type="submit" class="btn btn-primary" name="submit" value="Check">
+            </form>
+        </div>
+        <p>{{ chatResponse|linebreaksbr }}</p>
+    </div>
+</div>
+
+{% endblock content %}
